@@ -1,0 +1,148 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.lego-logo {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.lego-brick {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.lego-brick::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.lego-brick.red {
+  background: #FF6B6B;
+  animation-delay: 0s;
+}
+
+.lego-brick.yellow {
+  background: #FFD93D;
+  animation-delay: 0.2s;
+}
+
+.lego-brick.blue {
+  background: #4ECDC4;
+  animation-delay: 0.4s;
+}
+
+.lego-brick.green {
+  background: #6BCB77;
+  animation-delay: 0.6s;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-input {
+  padding: 16px;
+  font-size: 1.1rem;
+  font-family: 'Fredoka', sans-serif;
+  border: 3px solid #E0E0E0;
+  border-radius: 12px;
+  transition: all 0.3s;
+  background: #F9F9F9;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #FF6B6B;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
+  transform: translateY(-2px);
+}
+
+.login-input::placeholder {
+  color: #999;
+}
+
+.lego-button {
+  margin-top: 16px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .lego-brick {
+    width: 50px;
+    height: 50px;
+  }
+}
